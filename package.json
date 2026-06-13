@@ -6,23 +6,23 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint",
+        "lint": "eslint .",
         "safe-update": "npx npm-check-updates -u --cooldown 7d --peer --doctor --doctorTest \"npm run lint\" && npm install"
     },
     "dependencies": {
         "@types/node": "25.9.2",
-        "@types/react": "18.3.1",
-        "@types/react-dom": "18.3.0",
+        "@types/react": "19.2.17",
+        "@types/react-dom": "19.2.3",
         "autoprefixer": "10.5.0",
         "eslint": "8.57.0",
         "eslint-config-next": "14.2.7",
-        "next": "14.2.7",
+        "next": "^16.2.9",
         "postcss": "8.5.15",
-        "react": "18.3.1",
-        "react-dom": "18.3.1",
+        "react": "^19.2.7",
+        "react-dom": "^19.2.7",
         "sharp": "^0.34.5",
         "tailwindcss": "4.3.0",
-        "typescript": "6.0.3"
+        "typescript": "5.4.5"
     },
     "devDependencies": {
         "@netlify/plugin-nextjs": "^5.15.11",
