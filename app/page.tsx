@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import HeroImage from '../public/images/valorant_hero.gif'
-import Image from 'next/image'
-import FeaturedBundle from './components/FeaturedBundle'
+import Link from "next/link";
+import HeroImage from "../public/images/valorant_hero.gif";
+import Image from "next/image";
+import FeaturedBundle from "./components/FeaturedBundle";
 
 export default function Home() {
   return (
@@ -9,7 +9,11 @@ export default function Home() {
       {/* hero section */}
       <div className="hero bg-base-200 py-12">
         <div className="hero-content flex-col md:flex-row items-center justify-between max-w-5xl w-full">
-          <Image alt="valorant hero page" src={HeroImage} className=" rounded-lg shadow-2xl" />
+          <Image
+            alt="valorant hero page"
+            src={HeroImage}
+            className=" rounded-lg shadow-2xl"
+          />
           <div>
             <h2 className="text-l font-bold py-6">Search the latest skins</h2>
             <Link
@@ -25,7 +29,7 @@ export default function Home() {
       <div
         className="hero min-h-2"
         style={{
-          backgroundColor: '#DE1138',
+          backgroundColor: "#DE1138",
         }}
       >
         <div className="hero-content text-neutral-content text-center">
@@ -33,7 +37,7 @@ export default function Home() {
           <div
             className="hero min-h-2 w-full py-36 flex flex-wrap justify-center"
             style={{
-              backgroundColor: '#DE1138',
+              backgroundColor: "#DE1138",
             }}
           >
             <FeaturedBundle />
@@ -41,5 +45,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  )
+  );
 }
