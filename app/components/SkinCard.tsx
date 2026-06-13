@@ -19,7 +19,7 @@ const SkinCard: React.FC<SkinCardProps> = ({
 
   return (
     <div
-      className="skin-card w-60 h-48 m-4 rounded-lg bg-black text-white p-4"
+      className="skin-card w-60 h-48 m-4 rounded-lg bg-black text-white p-4 cursor-pointer"
       key={uuid}
       onClick={() => router.push(`/skins/${uuid}`)}
     >

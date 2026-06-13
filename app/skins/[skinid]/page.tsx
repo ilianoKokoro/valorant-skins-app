@@ -5,6 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import UnavailableImage from "@/app/components/Unavailable";
 import Loader from "@/app/components/Loader";
 import Image from "next/image";
+import CopyInput from "@/app/components/CopyInput";
 
 function SkinItem({ params }: { params: { skinId: string } }) {
   const router = useRouter();
@@ -51,7 +52,7 @@ function SkinItem({ params }: { params: { skinId: string } }) {
         }
 
         const res = await fetch(
-          `https://valorant-api.com/v1/weapons/skins/${currentSkinId}`
+          `https://valorant-api.com/v1/weapons/skins/${currentSkinId}`,
         );
         if (!res.ok) {
           throw new Error("Failed to fetch skin data");
@@ -76,7 +77,7 @@ function SkinItem({ params }: { params: { skinId: string } }) {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="flex flex-col items-center m-2.5">
+      <div className="flex flex-col items-center m-2.5 ">
         {skinItemData.displayIcon ? (
           <Image
             className="w-full h-24 object-contain"
@@ -92,11 +93,14 @@ function SkinItem({ params }: { params: { skinId: string } }) {
             <UnavailableImage />
           </div>
         )}
-        <h2 className="card-title text-center mt-40">
+        <h2 className="card-title text-center mt-40 mb-3">
           {skinItemData.displayName}
         </h2>
         {/* TODO: add price */}
         {/* <p className="text-center">Price goes here</p> */}
+
+        <CopyInput value={skinItemData.uuid} />
+
         <div className="card-actions justify-center mt-4">
           <button
             className="btn bg-customRed text-white hover:bg-white hover:text-black transition-colors"
